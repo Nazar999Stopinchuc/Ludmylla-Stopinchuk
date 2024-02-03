@@ -28,6 +28,12 @@
   }
 }
 
+@mixin r($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+  }
+}
+
 @mixin burger ($burgerWidth, $burgerHeight, $burgerLineHeight, $burgerColor) {
   width: $burgerWidth; 
   height: $burgerHeight;
