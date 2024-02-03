@@ -1,0 +1,49 @@
+$accent-text-color: #151515;
+$body-bg-color: #fff;
+$accent-bg-color: #f4f4f4;
+$accent-symbol-color: #212224;
+$accent-color: #be1f33;
+$btn-bg-color: #212224;
+
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1230px
+);
+
+%cormorant-300 {
+  font-family: 'Cormorant';
+  font-weight: 300;
+}
+
+%cormorant-400 {
+  font-family: 'Cormorant';
+  font-weight: 400;
+}
+
+%cormorant-500 {
+  font-family: 'Cormorant';
+  font-weight: 500;
+}
+
+%cormorant-italic-500 {
+  font-family: 'CormorantItalic';
+  font-weight: 500;
+}
+
+%opensans-400 {
+  font-family: 'OpenSans';
+  font-weight: 400;
+}
+
+%opensans-600 {
+  font-family: 'OpenSans';
+  font-weight: 600;
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,0 +1,121 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 20px;
+  line-height: 1.5;
+  @extend %cormorant-400;
+
+  color: $accent-text-color;
+  background-color: $body-bg-color;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-bottom: 80px;
+
+  @include mq ('tablet') {
+    padding-bottom: 60px;
+  }
+}
+
+.anim-text.active>* {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(120px);
+  transition: all 0.6s;
+  transition-delay: 0.2s;
+
+  @include mq ('tablet') {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+
+.link-animation {
+  transition: text-shadow 0.3s, color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    color: $body-bg-color;
+    background-color: $btn-bg-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($btn-bg-color, 0.702);
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.50);
+    color: $accent-text-color;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.btn-animation {
+  border-radius: 6px;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s, scale 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 0 1px $btn-bg-color;
+    background-color: $btn-bg-color;
+    color: $body-bg-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px $btn-bg-color;
+  }
+
+  &:active {
+    scale: 1.1;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}

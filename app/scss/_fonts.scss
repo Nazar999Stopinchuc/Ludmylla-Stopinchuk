@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Cormorant';
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url('../fonts/Cormorant-Light.woff2') format('woff2'),
+    url('../fonts/Cormorant-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/Cormorant-Regular.woff2') format('woff2'),
+    url('../fonts/Cormorant-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  font-weight: 500;
+  font-style: normal;
+  src:
+    url('../fonts/Cormorant-Medium.woff2') format('woff2'),
+    url('../fonts/Cormorant-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantItalic';
+  font-weight: 500;
+  font-style: normal;
+  src:
+    url('../fonts/Cormorant-Italic.woff2') format('woff2'),
+    url('../fonts/Cormorant-Italic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/OpenSans-SemiBold.woff') format('woff');
+  font-display: swap;
+}
