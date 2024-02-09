@@ -8,955 +8,984 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<header class="header">
-  <div class="container">
-    <nav class="menu">
-      <a class="logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="логотип">
-      </a>
-
-      <button class="burger" type="button">
-        <span class="burger__line"></span>
-        <span class="sr-only">Відкрити меню</span>
-      </button>
-
-      <ul class="menu__nav">
-        <li class="menu__item">
-          <a class="menu__link link-animation menu__link--active" href="#">Головна</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link-animation" href="#">Бібліотека</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link-animation" href="#">Контакти</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="menu-mob">
-      <a class="logo menu-mob__logo" href="#">
-        <img class="logo__img" src="images/logo.svg" alt="логотип">
-      </a>
-
-      <ul class="menu__nav menu__nav--mob">
-        <li class="menu__item">
-          <a class="menu__link link-animation menu__link--active" href="#">Головна</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link-animation" href="#">Бібліотека</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link link-animation" href="#">Контакти</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
 <body>
 
-<section class="first-screen">
-  <div class="container">
-    <div class="first-screen__wrap">
-      <h1 class="sr-only">Стопінчук Людмила Василівна, поет</h1>
-        <div class="first-screen__text anim-items">
-          <q class="first-screen__quote">А я живу таки - цей день засвідчую,
-            де мої вигадки сильніші відчаю.</q>
-          <cite class="first-screen__cite">Стопінчук Людмила Василівна </cite>
-        </div>
-    </div>
-    <a class="first-screen__scroll link-animation" href="#">
-      Дивитись далі
-      <svg>
-        <use xlink:href="images/sprite.svg#chevron-icon"></use>
-      </svg>
-    </a>
-  </div>
-</section>
-
-<section class="about section">
-  <div class="container">
-    <div class="anim-text anim-items">
-      <h2 class="title">Про мене</h2>
-    </div>
-    <ul class="about__slider anim-items">
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-1.jpg" alt="фото автора">
-      </li>
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-2.jpg" alt="фото автора">
-      </li>
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-3.jpg" alt="фото автора">
-      </li>
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-1.jpg" alt="фото автора">
-      </li>
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-2.jpg" alt="фото автора">
-      </li>
-      <li class="about__item">
-        <img class="about__img" src="images/about/about-3.jpg" alt="фото автора">
-      </li>
-    </ul>
-
-    <div class="anim-text anim-items">
-      <p class="about__text ">Я - Стопінчук Людмила Василівна
-        Народилася 20 лютого 1980 року у селі Плоске на Вінниччині.
-        Навчалася у Плосківській початковій школі та в Лучинецькій загальноосвітній школі.
-        Вищу освіту здобула у Вінницькому Національному аграрному університеті .
-      </p>
-    </div>
-    <div class="anim-text anim-items">
-      <p class="about__text ">Витоки творчості - наш український фольклор. Мені пощастило зростати на
-        репетиціях
-        народного
-        колективу " Площаночка " ,
-        а згодом навіть стати його учасницею на якийсь час. Саме українська пісня, яку я слухала і чула з дитинства,
-        стала
-        першоджерелом всіх моїх римованих думок.</p>
-    </div>
-    <div class="anim-text anim-items">
-      <p class="about__text ">Друкуюся в періодиці, зокрема альманах " Ковток життя " від видавництва "Час
-        змін
-        ".
-        Планую надрукувати власну збірку поезій.</p>
-    </div>
-  </div>
-</section>
-
-<section class="categories section">
-  <div class="container">
-    <div class="anim-text anim-items">
-      <h2 class="title">Категорії</h2>
-    </div>
-
-    <ul class="categories__control">
-      <li class="categories__control-item">
-        <button class="categories__control-btn btn-animation" type="button"
-          data-filter=".category-1">Вибрані</button>
-      </li>
-      <li class="categories__control-item">
-        <button class="categories__control-btn btn-animation" type="button"
-          data-filter=".category-2">Патріотична лірика</button>
-      </li>
-      <li class="categories__control-item">
-        <button class="categories__control-btn btn-animation" type="button"
-          data-filter=".category-3">Любовна лірика</button>
-      </li>
-      <li class="categories__control-item">
-        <button class="categories__control-btn btn-animation" type="button"
-          data-filter=".category-4">Пейзажна лірика</button>
-      </li>
-      <li class="categories__control-item">
-        <button class="categories__control-btn btn-animation" type="button"
-          data-filter=".category-5">Філософська лірика</button>
-      </li>
-    </ul>
-
-    <ul class="categories__content">
-      <li class="categories__content-item mix category-1">
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
+  <header class="header" id="header">
+    <div class="header__wrap">
+      <div class="container">
+        <nav class="menu">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="логотип">
           </a>
-        </article>
-      </li>
-      <li class="categories__content-item mix category-1">
 
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-1">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-1">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-1">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-1">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-
-      <li class="categories__content-item mix category-2">
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-      </li>
-      <li class="categories__content-item mix category-2">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-2">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-2">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-2">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-2">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-
-
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-3">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-4">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-      <li class="categories__content-item mix category-5">
-
-        <article class="verse-card">
-          <h2 class="sr-only">Вірш</h2>
-          <div class="verse-card__column">
-            <p>Живу, як можу.</p>
-            <p>Часом не дихаю</p>
-            <p>і не тривожу</p>
-            <p>небо молитвою.</p>
-            <p>Благеньке " мушу "</p>
-            <p>тоді утримує,</p>
-            <p>тіло і душу</p>
-            <p>суттю незримою.</p>
-          </div>
-
-          <a class="verse-card__link" href="#">Читати повністью
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-arrow"></use>
-            </svg></a>
-        </article>
-
-      </li>
-    </ul>
-  </div>
-</section>
-
-<sectioon class="publications section">
-  <div class="container">
-    <div class="anim-text anim-items">
-      <h2 class="title">Мої публікації</h2>
-    </div>
-    <ul class="publications__list">
-      <li class="publications__item">
-        <a class="publications__link" href="#">
-          <img class="publications__img" src="images/logo.svg" alt="логотип">
-        </a>
-      </li>
-      <li class="publications__item">
-        <a class="publications__link" href="#">
-          <img class="publications__img" src="images/logo.svg" alt="логотип">
-        </a>
-      </li>
-      <li class="publications__item">
-        <a class="publications__link" href="#">
-          <img class="publications__img" src="images/logo.svg" alt="логотип">
-        </a>
-      </li>
-      <li class="publications__item">
-        <a class="publications__link" href="#">
-          <img class="publications__img" src="images/logo.svg" alt="логотип">
-        </a>
-      </li>
-
-      <li class="publications__item">
-        <a class="publications__link" href="#">
-          <img class="publications__img" src="images/logo.svg" alt="логотип">
-        </a>
-      </li>
-    </ul>
-  </div>
-</sectioon>
-
-<section class="contacts section">
-  <div class="container">
-    <div class="anim-text anim-items">
-      <h2 class="title">Мої контакти</h2>
-      <div class="contacts__wrap">
-        <div class="contacts__content">
-          <p class="contacts__text">
-            Зв'язатися зі мною можна, скориставшись контактною формою, або за номером телефону, email, в соцмережах:
-          </p>
-
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <a class="contacts__link link-animation" href="tel:+380501111111">+38 (050) 111 11 11</a>
+          <button class="burger" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Відкрити меню</span>
+          </button>
+
+          <ul class="menu__nav">
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation menu__link--active" href="#">Головна</a>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link link-animation" href="mailto:frontend-monster@email.com">frontend-monster@email.com
-              </a>
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation" href="library-selected.html">Бібліотека</a>
+            </li>
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation contact" href="#contacts">Контакти</a>
             </li>
           </ul>
-          
-          <ul class="social">
-            <li class="social__item">
-              <a class="social__link background" href="#" target="_blank">
-                <span class="sr-only">Посилання на інстаграм</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
+        </nav>
+
+        <nav class="menu-mob">
+          <a class="logo menu-mob__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="логотип">
+          </a>
+
+          <ul class="menu__nav menu__nav--mob">
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation menu__link--active" href="#">Головна</a>
             </li>
-            <li class="social__item">
-              <a class="social__link background" href="#" target="_blank">
-                <span class="sr-only">Посилання на фейсбук</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-telegram"></use>
-                </svg>
-              </a>
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation" href="library-selected.html">Бібліотека</a>
             </li>
-            <li class="social__item">
-              <a class="social__link background" href="#" target="_blank">
-                <span class="sr-only">Посилання на телеграм</span>
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
+            <li class="menu__item anim-items">
+              <a class="menu__link link-animation contact" href="#contacts">Контакти</a>
             </li>
           </ul>
-
-        </div>
-        <form class="form" id="form">
-        
-          <div class="form__inner">
-            <div class="form__field">
-              <label class="form__label" for="name">Ваше імя</label>
-              <input class="form__input" type="email" id="name" name="name" placeholder="Іван" required>
-            </div>
-        
-            <div class="form__field">
-              <label class="form__label" for="tel">Номер телефону</label>
-              <input class="form__input" type="tel" id="tel" name="tel" placeholder="+380501111111" required>
-            </div>
-          </div>
-        
-          <div class="form__field">
-            <label class="form__label" for="message">Ваше повідомлення</label>
-            <textarea class="form__input form__input--message" id="message" name="message"
-              placeholder="Текст вашего повідомлення"></textarea>
-          </div>
-        
-          <button class="form__btn btn-animation" type="submit">Відправити</button>
-        
-        </form>
+        </nav>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-</body>
+  <main class="main">
 
-<footer class="footer">
-    <a class="logo" href="#">
+    <section class="first-screen">
+      <div class="container">
+        <div class="first-screen__wrap">
+          <h1 class="sr-only">Стопінчук Людмила Василівна, поет</h1>
+          <div class="first-screen__text anim-items">
+            <q class="first-screen__quote">А я живу таки - цей день засвідчую,
+              де мої вигадки сильніші відчаю.</q>
+            <cite class="first-screen__cite">Людмила Стопінчук</cite>
+          </div>
+        </div>
+        <a class="first-screen__scroll anim-items" href="#categories">
+          Мої вірші
+          <svg>
+            <use xlink:href="images/sprite.svg#chevron-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="about section">
+      <div class="container">
+        <div class="anim-text anim-items">
+          <h2 class="title">Про мене</h2>
+        </div>
+        <ul class="about__slider anim-items">
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-1.jpg" alt="фото автора">
+          </li>
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-2.jpg" alt="фото автора">
+          </li>
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-3.jpg" alt="фото автора">
+          </li>
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-1.jpg" alt="фото автора">
+          </li>
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-2.jpg" alt="фото автора">
+          </li>
+          <li class="about__item">
+            <img class="about__img" src="images/about/about-3.jpg" alt="фото автора">
+          </li>
+        </ul>
+
+        <div class="anim-text anim-items">
+          <p class="about__text ">Я - Стопінчук Людмила Василівна
+            Народилася 20 лютого 1980 року у селі Плоске на Вінниччині.
+            Навчалася у Плосківській початковій школі та в Лучинецькій загальноосвітній школі.
+            Вищу освіту здобула у Вінницькому Національному аграрному університеті .
+          </p>
+
+          <p class="about__text ">Витоки творчості - наш український фольклор. Мені пощастило зростати на
+            репетиціях
+            народного
+            колективу " Площаночка " ,
+            а згодом навіть стати його учасницею на якийсь час. Саме українська пісня, яку я слухала і чула з дитинства,
+            стала
+            першоджерелом всіх моїх римованих думок.</p>
+
+          <p class="about__text ">Друкуюся в періодиці, зокрема альманах " Ковток життя " від видавництва "Час
+            змін
+            ".
+            Планую надрукувати власну збірку поезій.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section" id="categories">
+      <div class="container">
+        <div class="anim-text anim-items">
+          <h2 class="title">Категорії</h2>
+        </div>
+
+        <ul class="categories__control">
+          <li class="categories__control-item anim-items">
+            <button class="categories__control-btn btn-animation" type="button"
+              data-filter=".category-1">Вибрані</button>
+          </li>
+          <li class="categories__control-item anim-items">
+            <button class="categories__control-btn btn-animation" type="button" data-filter=".category-2">Патріотична
+              лірика</button>
+          </li>
+          <li class="categories__control-item anim-items">
+            <button class="categories__control-btn btn-animation" type="button" data-filter=".category-3">Любовна
+              лірика</button>
+          </li>
+          <li class="categories__control-item anim-items">
+            <button class="categories__control-btn btn-animation" type="button" data-filter=".category-4">Пейзажна
+              лірика</button>
+          </li>
+          <li class="categories__control-item anim-items">
+            <button class="categories__control-btn btn-animation" type="button" data-filter=".category-5">Філософська
+              лірика</button>
+          </li>
+        </ul>
+
+
+        <ul class="categories__content" id="mix">
+          <li class="categories__content-item mix category-1">
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                  Живу, як можу. <br>
+                  Часом не дихаю <br>
+                  і не тривожу <br>
+                  небо молитвою. <br>
+                  Благеньке " мушу " <br>
+                  тоді утримує, <br>
+                  тіло і душу <br>
+                  суттю незримою. <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-1">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+          </li>
+          <li class="categories__content-item mix category-1">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                  В саду моєму яблука доспіли, <br>
+                  а осінь тішить сонцем і теплом. <br>
+                  Не віриться, що літо відшуміло <br>
+                  і листопад чатує за селом. <br>
+                </p>
+                <p class="verse-card__column">
+                  Та серце повне гіркості і втоми, <br>
+                  прозорий смуток душу полонив... <br>
+                  Горять-палають на калині ґрона, <br>
+                  а ти пішов, ні слова не зронив. <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-2">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-1">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                  Перший туман, новий роман, <br>
+                  чашечка доброї кави. <br>
+                  Пишуть в романі : життя - це обман. <br>
+                  Але ж доволі цікавий. <br>
+                </p>
+                <p class="verse-card__column">
+                  Затишний плед, липовий мед, <br>
+                  вікон замислена тиша. <br>
+                  Як я люблю цей знайомий сюжет . <br>
+                  Знову його перепишу . <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-3">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-1">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                  Коли приходять дощі , <br>
+                  втомлений світ стихає <br>
+                  і чути крізь сон вночі, <br>
+                  як хтось у саду зітхає . <br>
+                </p>
+                <p class="verse-card__column">
+                  Може змарноване літо, <br>
+                  може забуте кохання, <br>
+                  може самотній вітер, <br>
+                  може чиє страждання... <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-1">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                Осінній дощ не поспішає - <br>
+                йде тротуарами поволі, <br>
+                зов'ялі клумби поливає, <br>
+                а розквітають парасолі... <br>
+                </p>
+                <p class="verse-card__column">
+                  Короткі дні, слізьми пролиті, <br>
+                  осінній дощ собі прощає . <br>
+                  Він знає, що у цьому світі <br>
+                  нічого марно не буває. <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-5">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-1">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__content">
+                <p class="verse-card__column">
+                В передчутті осінньої краси <br>
+                вона бувала іноді печальна . <br>
+                На дні зіниць ховала віщі сни <br>
+                і роль свою тримала ідеально . <br>
+                </p>
+                <p class="verse-card__column">
+                  Душа блукала боса по стерні, <br>
+                  але ніхто не бачив тої муки. <br>
+                  Трималася за сонячні пісні <br>
+                  і виливала біль у ніжні звуки . <br>
+                </p>
+              </div>
+              <a class="verse-card__link" href="library-selected.html#selected-6">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+
+          <li class="categories__content-item mix category-2">
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+              <a class="verse-card__link" href="library-patriot.html#patriot-1">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+          </li>
+          <li class="categories__content-item mix category-2">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-patriot.html#patriot-2">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-2">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-patriot.html#patriot-3">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-2">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-patriot.html#patriot-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-2">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-patriot.html#patriot-5">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-2">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-patriot.html#patriot-6">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+
+
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-1">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-2">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-3">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-5">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-3">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-love.html#love-6">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-1">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-2">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-3">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-5">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-4">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-landscape.html#landscape-6">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-1">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-2">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-3">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-4">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+          <li class="categories__content-item mix category-5">
+
+            <article class="verse-card">
+              <h2 class="sr-only">Вірш</h2>
+              <div class="verse-card__column">
+                <p>Живу, як можу.</p>
+                <p>Часом не дихаю</p>
+                <p>і не тривожу</p>
+                <p>небо молитвою.</p>
+                <p>Благеньке " мушу "</p>
+                <p>тоді утримує,</p>
+                <p>тіло і душу</p>
+                <p>суттю незримою.</p>
+              </div>
+
+              <a class="verse-card__link" href="library-philosophy.html#philosophy-5">Читати повністью
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></a>
+            </article>
+
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="publications section">
+      <div class="container">
+
+        <div class="anim-text anim-items">
+          <h2 class="title">Мої публікації</h2>
+        </div>
+
+        <ul class="publications__list">
+          <li class="publications__item anim-items">
+            <a class="publications__link" href="#">
+              <img class="publications__img" src="images/logo.svg" alt="логотип">
+            </a>
+          </li>
+          <li class="publications__item anim-items">
+            <a class="publications__link" href="#">
+              <img class="publications__img" src="images/logo.svg" alt="логотип">
+            </a>
+          </li>
+          <li class="publications__item anim-items">
+            <a class="publications__link" href="#">
+              <img class="publications__img" src="images/logo.svg" alt="логотип">
+            </a>
+          </li>
+          <li class="publications__item anim-items">
+            <a class="publications__link" href="#">
+              <img class="publications__img" src="images/logo.svg" alt="логотип">
+            </a>
+          </li>
+
+          <li class="publications__item anim-items">
+            <a class="publications__link" href="#">
+              <img class="publications__img" src="images/logo.svg" alt="логотип">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="contacts section" id="contacts">
+      <div class="container">
+        <div class="anim-text anim-items">
+          <h2 class="title">Мої контакти</h2>
+        </div>
+        <div class="contacts__wrap">
+          <div class="contacts__content">
+            <p class="contacts__text">
+              Зв'язатися зі мною можна, скориставшись контактною формою, або за номером телефону, email, в соцмережах:
+            </p>
+
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link link-animation" href="tel:+380501111111">+38 (050) 111 11 11</a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link link-animation"
+                  href="mailto:frontend-monster@email.com">frontend-monster@email.com
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link background" href="#" target="_blank">
+                  <span class="sr-only">Посилання на інстаграм</span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link background" href="#" target="_blank">
+                  <span class="sr-only">Посилання на фейсбук</span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link background" href="#" target="_blank">
+                  <span class="sr-only">Посилання на телеграм</span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <form class="form" id="form" onsubmit="sendEmailTelegram(event)">
+
+            <div class="form__inner">
+              <div class="form__field">
+                <label class="form__label" for="name">Ваше імя</label>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Іван" required>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="tel">Номер телефону</label>
+                <input class="form__input" type="tel" id="tel" name="tel" placeholder="+380501111111" required>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label" for="message">Ваше повідомлення</label>
+              <textarea class="form__input form__input--message" id="message" name="message"
+                placeholder="Текст вашего повідомлення"></textarea>
+            </div>
+
+            <button class="form__btn btn-animation" type="submit">Відправити</button>
+            <div class="form__send-result"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <a class="logo footer__logo" href="#header">
       <img class="logo__img" src="images/logo.svg" alt="логотип">
     </a>
-</footer>
-<script src="js/main.min.js"></script>
+  </footer>
+  <script src="js/main.min.js"></script>
+
+</body>
 
 </html>
