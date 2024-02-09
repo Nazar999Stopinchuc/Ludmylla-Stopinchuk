@@ -5,19 +5,37 @@
 @import 'libs';
 @import 'global';
 
+.header {
+  padding-top: 142px;
+
+  @include mq ('tablet') {
+    padding-top: 100px;
+  }
+
+  &__wrap {
+    display: block;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 997;
+    padding: 30px 0;
+    transition: padding 0.4s;
+
+    @include mq ('tablet') {
+      padding: 15px 0;
+    }
+  }
+
+  &__wrap--fixed {
+    padding: 10px 0;
+    background-color: #c2c2c2;
+  }
+}
+
 .menu {
-  height: 142px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @include mq ('tablet') {
-    height: 100px;
-  }
-
-  @include r(560) {
-    height: 100px;
-  }
 
   &__nav {
     display: flex;
@@ -44,6 +62,30 @@
         gap: 20px;
         margin-left: 10px;
       }
+    }
+  }
+
+  &__item {
+    opacity: 0;
+    transform: translateY(-60px);
+    transition: opacity 0.5s, transform 0.8s;
+
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.3s;
     }
   }
 
@@ -77,7 +119,7 @@
   display: none;
   z-index: 999;
   position: fixed;
-  padding: 20px 0 0 10px;
+  padding: 20px 10px;
   gap: 40px;
   left: -200%;
   top: 0;
@@ -141,10 +183,10 @@
   background-image: url("../images/header/header-background.jpg");
   @extend %bg;
   z-index: 1;
-  padding-bottom: 50px;
 
   @include mq ('tablet') {
     height: calc(100vh - 100px);
+    margin-bottom: 60px;
   }
 
   @include r(560) {
@@ -170,7 +212,7 @@
     transform: translateY(80px);
     opacity: 0;
     transition: all 0.8s;
-    transition-delay: 0.2s;
+    transition-delay: 0.4s;
 
     &.active {
       transform: translateY(0);
@@ -253,10 +295,24 @@
     position: absolute;
     height: 60px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
     bottom: 25px;
     color: $body-bg-color;
     @extend %opensans-400;
+    opacity: 0;
+    transition: color 0.3s, transform 0.8s, opacity 0.8s;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    &:active {
+      color: $accent-text-color;
+    }
 
     &:hover svg {
       fill: $accent-color;
@@ -343,14 +399,25 @@
     font-size: 25px;
     margin-bottom: 10px;
 
-    transform: translateY(120px);
+    transform: translateX(-50%);
     opacity: 0;
-    transition: all 0.8s;
-    transition-delay: 0.2s;
+    transition: opacity 0.8s, transform 0.8s;
 
     &.active {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
+    }
+
+    &:nth-child(1) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.4s;
     }
 
     @include mq ('tablet') {
@@ -420,10 +487,8 @@
 }
 
 .categories {
-
   &__control {
     display: flex;
-    justify-content: center;
     margin-bottom: 45px;
     gap: 20px;
     padding: 5px;
@@ -433,6 +498,39 @@
     @include mq ('tablet') {
       margin-bottom: 20px;
       gap: 10px;
+    }
+  }
+
+  &__control-item {
+    scale: 0;
+    transition: scale 0.8s;
+
+    &.active {
+      scale: 1;
+    }
+
+    &:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: 0.4s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: 0.5s;
+    }
+
+    @include mq ('tablet') {
+      transition-delay: 0;
     }
   }
 
@@ -457,6 +555,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
 
     @include mq ('tablet-2') {
       grid-template-columns: repeat(2, 1fr);
@@ -499,8 +598,12 @@
 }
 
 .verse-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   @extend %bg;
+  height: 400px;
   padding: 20px 15px;
 
   &::before {
@@ -515,25 +618,22 @@
     text-align: center;
     line-height: 1.3;
     z-index: 1;
-    font-size: 25px;
+    font-size: 23px;
     color: $body-bg-color;
     margin-bottom: 15px;
 
-    & p {
-      white-space: nowrap;
-    }
   }
 
   &__link {
     position: relative;
     display: inline-block;
+    max-width: 200px;
     border-radius: 15px;
-    margin-top: 20px;
     color: $body-bg-color;
     padding: 9px 45px 9px 10px;
     border: 1px solid $body-bg-color;
     z-index: 1;
-    transition: padding-right 0.3s;
+    transition: max-width 0.3s;
     white-space: nowrap;
 
     & svg {
@@ -547,7 +647,7 @@
     }
 
     &:hover {
-      padding-right: 120px;
+      max-width: 300px;
     }
   }
 }
@@ -557,6 +657,15 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+  }
+
+  &__item {
+    scale: 0;
+    transition: scale 0.8s;
+
+    &.active {
+      scale: 1;
+    }
   }
 
   &__item:not(:last-child) {
@@ -570,6 +679,8 @@
 }
 
 .contacts {
+  padding-bottom: 50px;
+
   &__wrap {
     display: flex;
 
@@ -720,6 +831,153 @@
     box-shadow: 0 0 0 1px $accent-text-color;
     font-size: 22px;
   }
+}
+
+.selected {
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    padding-top: 104px;
+    margin-top: -104px;
+    background-clip: content-box;
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text {
+    min-width: 50%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  &__column:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    display: block;
+    width: 600px;
+    height: 800px;
+    @extend %bg;
+  }
+}
+
+.content-btn {
+  position: fixed;
+  top: 200px;
+  left: 50px;
+  z-index: 996;
+  font-size: 30px;
+  padding: 0 40px 0 10px;
+  border-radius: 6px;
+  background-color: $accent-symbol-color;
+  color: $body-bg-color;
+  transition: padding-right 0.3s;
+
+  &:hover {
+    padding-right: 70px;
+  }
+
+  & svg {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 15px;
+    fill: $body-bg-color;
+  }
+}
+
+.content {
+  position: fixed;
+  padding: 20px 0;
+  top: 10px;
+  bottom: 10px;
+  left: -200%;
+  width: 40%;
+  z-index: 999;
+  border-radius: 6px;
+  border: 1px solid #c2c2c2;
+  background-color: $body-bg-color;
+  transition: left 0.3s;
+  overflow-y: auto;
+
+  &--active {
+    left: 15px;
+  }
+
+  &__title {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c2c2c2;
+  }
+
+  &__subtitle {
+    font-size: 35px;
+    padding-left: 20px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    padding: 0 0 10px 40px;
+    border-bottom: 1px solid #c2c2c2;
+  }
+
+  &__link {
+    font-size: 30px;
+    padding: 0 10px 5px 10px;
+    border-radius: 6px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  & svg {
+    height: 20px;
+    width: 15px;
+    fill: $accent-symbol-color;
+    transition: fill 0.3s;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    font-size: 25px;
+    text-align: center;
+    background-color: #c2c2c2;
+
+    &--active {
+      opacity: 0.5;
+    }
+
+    &--active svg {
+      fill: $body-bg-color;
+    }
+
+    &:hover svg {
+      fill: $body-bg-color;
+    }
+  }
+
 }
 
 .footer {

@@ -15,6 +15,10 @@ body {
   background-color: $body-bg-color;
 }
 
+.main {
+  flex-grow: 1;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -34,11 +38,24 @@ body {
 
   &::after {
     @include pseudo;
+    position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
+.lock-l {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+}
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -46,10 +63,10 @@ body {
 }
 
 .section {
-  padding-bottom: 80px;
+  padding-top: 100px;
 
   @include mq ('tablet') {
-    padding-bottom: 60px;
+    padding-top: 80px;
   }
 }
 
@@ -63,8 +80,8 @@ body {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
-  transform: translateY(120px);
-  transition: all 0.6s;
+  transform: translateY(60px);
+  transition: transform 0.6s, opacity 0.6s;
   transition-delay: 0.2s;
 
   @include mq ('tablet') {
@@ -74,7 +91,7 @@ body {
 }
 
 .link-animation {
-  transition: text-shadow 0.3s, color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, text-shadow 0.3s, color 0.3s, box-shadow 0.3s;
 
   &:hover {
     color: $body-bg-color;
@@ -118,4 +135,9 @@ body {
 
 .slick-track {
   display: flex;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
 }
