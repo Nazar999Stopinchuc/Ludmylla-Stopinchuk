@@ -140,7 +140,7 @@ async function sendEmailTelegram(event) {
   event.preventDefault();
 
   const form = event.target;
-  const formBtn = document.querySelector('.form__btn button')
+  const formBtn = document.querySelector('.form__btn')
   const formSendResult = document.querySelector('.form__send-result')
   formSendResult.textContent = '';
 
