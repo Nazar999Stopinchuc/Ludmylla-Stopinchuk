@@ -56,11 +56,13 @@ body {
     z-index: 998;
   }
 }
+
 .container {
   max-width: 1230px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .section {
   padding: 50px 0 50px 0;
 
@@ -79,7 +81,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(20px);
   transition: transform 0.6s, opacity 0.6s;
   transition-delay: 0.2s;
 
