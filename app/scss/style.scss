@@ -38,32 +38,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  &__nav {
-    display: flex;
+.nav {
+  display: flex;
 
+  @include mq('tablet') {
+    display: none;
+  }
+
+  @include r(560) {
+    display: none;
+  }
+
+  &--mob {
     @include mq('tablet') {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-left: 10px;
     }
 
     @include r(560) {
-      display: none;
-    }
-
-    &--mob {
-      @include mq('tablet') {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-left: 10px;
-      }
-
-      @include r(560) {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-left: 10px;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-left: 10px;
     }
   }
 
@@ -863,6 +863,14 @@
     text-align: center;
     font-size: 25px;
     line-height: 1.2;
+    opacity: 0.5;
+    scale: 0.8;
+    transition: opacity 0.8s, scale 0.8s;
+
+    &.active {
+      opacity: 1;
+      scale: 1;
+    }
 
     @include mq ('tablet') {
       order: 2;
@@ -882,6 +890,13 @@
     width: 600px;
     height: 800px;
     @extend %bg;
+    opacity: 0;
+    transition: opacity 1.8s;
+    transition-delay: 0.3s;
+
+    &.active {
+      opacity: 1;
+    }
 
     @include mq ('tablet') {
       order: 1;

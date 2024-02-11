@@ -61,8 +61,8 @@ $(function () {
       }
     ]
   });
-
 });
+
 
 window.onscroll = function headerFixed() {
   let header = document.querySelector('.header__wrap');
