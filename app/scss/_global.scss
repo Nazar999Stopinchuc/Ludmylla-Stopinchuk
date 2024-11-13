@@ -3,6 +3,10 @@ html {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -130,15 +134,49 @@ body {
   }
 }
 
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-}
-
 .disabled {
   pointer-events: none;
   cursor: default;
 }
+
+.mixitup-control-active {
+  background-color: $btn-bg-color;
+  color: $body-bg-color;
+}
+
+ .swiper {
+   width: 100%;
+   height: 100%;
+ }
+
+ .swiper-wrapper {
+  transition-timing-function: ease-out;
+   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+ }
+
+ .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .swiper-slide img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px;
+ }
+
+ .swiper-button-next,
+ .swiper-button-prev {
+    @include mq ('tablet') {
+        display: none;
+      }
+ }

@@ -1,68 +1,60 @@
-$(function () {
+"use strict"
 
-  $('.burger').click(function () {
-    $('.burger').addClass('burger--active');
-    $('.menu-mob').addClass('menu-mob--active');
-    $('body').addClass('lock');
-  });
+//////////////slider///////////////////
 
-  $('.menu__link').click(function () {
-    $('.burger').removeClass('burger--active');
-    $('.menu-mob').removeClass('menu-mob--active');
-    $('body').removeClass('lock');
-  });
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  centeredSlides: true,
+  initialSlide: 1,
+  speed: 300,
+  cssMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-  $('.content__link').click(function () {
-    $('.content').removeClass('content--active');
-    $('body').removeClass('lock-l');
-  });
-
-
-  let $page = $('html, body');
-  $('.contact, .footer__logo, .first-screen__scroll').click(function () {
-    $page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
-    }, 800);
-    return false;
-  });
-
-  $('.about__slider').slick({
-    infinite: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerPadding: '40px',
-    centerMode: true,
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          centerPadding: '20px'
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          centerMode: false,
-          initialSlide: 0,
-          arrows: false,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 650,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          dots: true,
-          centerMode: false,
-        }
-      }
-    ]
-  });
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    }
+  }
 });
 
+//////////////slider///////////////////
+
+
+///////////////burger/////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.menu-mob');
+  const body = document.querySelector('body');
+
+  burger.addEventListener('click', () => {
+    burger.classList.add('burger--active');
+    mobileMenu.classList.add('menu-mob--active');
+    body.classList.add('lock');
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== burger && e.target !== mobileMenu) {
+      burger.classList.remove('burger--active');
+      mobileMenu.classList.remove('menu-mob--active');
+      body.classList.remove('lock');
+    }
+  });
+
+});
+
+///////////////burger/////////////////////////
+
+
+//////////////sticky header//////////////////////
 
 window.onscroll = function headerFixed() {
   let header = document.querySelector('.header__wrap');
@@ -73,6 +65,10 @@ window.onscroll = function headerFixed() {
     header.classList.remove('header__wrap--fixed');
   }
 };
+
+//////////////sticky header//////////////////////
+
+/////////////Open content/////////////////////
 
 if (document.getElementById('content')) {
 document.addEventListener('DOMContentLoaded', () => {
@@ -94,22 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 };
 
+/////////////Open content/////////////////////
 
-document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.menu-mob');
-  const bodyLock = document.querySelector('body');
 
-  document.addEventListener('click', function (e) {
-    if (e.target !== burger && e.target !== mobileMenu) {
-      burger.classList.remove('burger--active');
-      mobileMenu.classList.remove('menu-mob--active');
-      bodyLock.classList.remove('lock');
-    }
-  });
-
-});
-
+////////////scroll animation//////////////////
 
 function onEntry(entry) {
   entry.forEach(change => {
@@ -128,9 +112,11 @@ let elements = document.querySelectorAll('.anim-items');
 for (let elm of elements) {
   observer.observe(elm);
 }
+////////////scroll animation//////////////////
 
-"use strict"
-//==========================================
+
+///////////Send Email Telegram///////////////
+
 const TELEGRAM_BOT_TOKEN = '6474574391:AAFpD6y_4ViRwqv70fuoiJOunDnmeePQ77w';
 const TELEGRAM_CHAT_ID = '-4110046168';
 const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
@@ -181,6 +167,7 @@ async function sendEmailTelegram(event) {
   }
 };
 
+///////////Send Email Telegram///////////////
 
 
 if (document.getElementById('mix')){
